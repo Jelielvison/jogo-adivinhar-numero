@@ -1,16 +1,48 @@
-var numeroSecreto = parseInt(Math.random() * 101);
+var express = require("express")
+var cors = require("cors")
 
-function Chutar() {
-  var elementoResultado = document.getElementById("resultado");
-  var chute = parseInt(document.getElementById("valor").value);
+var produtos = [{
+    id: 1,
+    description: "Pequena descricao",
+    price: 5.44,
+    active: true,
+    unit: 55
+},
+{
+    id: 5,
+    description: "banana",
+    price: 5.44,
+    active: true,
+    unit: 55
+}]
+var aplicativo =  express()
 
-  if (chute == numeroSecreto) {
-    elementoResultado.innerHTML = "Você acertou";
-  } else if (chute > 100 || chute < 0) {
-    elementoResultado.innerHTML = "Você deve digitar um número de 0 a 100";
-  } else if (numeroSecreto > chute) {
-    elementoResultado.innerHTML = "Você errou, o número é maior que seu chute";
-  } else {
-    elementoResultado.innerHTML = "Você errou, o número é menor que seu chute";
-  }
-}
+aplicativo.use(cors())
+
+aplicativo.get("/", function(req, res){
+
+    res.json({
+        mensagem: "eu sou um json"
+    })
+})
+
+aplicativo.get("/produtos", function(req, res){
+
+    res.json(produtos)
+})
+
+aplicativo.get("/produtos/:id", function(req, res){
+    var produto = produtos.find(function(item){
+        return item.id == req.params.id
+    })
+    if(produto) {
+        res.json(produto)
+    }else {
+        res.json({mensagem: "Produto não existe"})
+    }
+    
+})
+
+aplicativo.listen("80", function(){
+    console.log("Ergueu a app ", 80)
+})

@@ -1,13 +1,17 @@
 {
-  "name": "jogo",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "N3 Web & UX - jogo desenvolvido",
+  "description": "Avaliacao do professor luiz",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Daniel, Guilherme O., Jeliel, José",
-  "license": "MIT",
+  "keywords": [
+    "programacao",
+    "aula"
+  ],
+  "author": "Geliel...",
+  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2"
