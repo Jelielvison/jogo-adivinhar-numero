@@ -41,6 +41,8 @@ button {
     padding: 4px 8px;
     border-radius: 10px;
     background: #ffffff;
+    color: #000000;
+    border-color: #000000;
 }
 
 h2 {
