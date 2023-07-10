@@ -12,7 +12,7 @@ function Chutar() {
         contagem--;
         if (chute == numeroSecreto) {
             elementoResultado.innerHTML = "Você acertou";
-            var nome = prompt("Digite o seu nome:");
+            //var nome = prompt("Digite o seu nome:");
         } else if (chute > 100 || chute < 0) {
             elementoResultado.innerHTML = "Você deve digitar um número de 0 a 100";
         } else if (numeroSecreto > chute) {
