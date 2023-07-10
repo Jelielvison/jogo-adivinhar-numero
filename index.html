@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>
+        Jogo - Mentalista
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">
+            Mentalista
+        </h1>
+
+        <p class="page-subtitle">
+            Digite um número de 0 a 100
+        </p>
+        <input type="number" id="valor" /><br>
+        <button type="submit" onclick="Chutar()">Chutar</button>
+        <button type="button" onclick="Recarregar()">Recarregar</button>
+        <div class="textoTentativas">
+            <h2 class="tentativas">Suas tentativas: </h2>
+            <h2 class="tentativas" id="tentativas"> </h2>
+        </div>
+        <h2 class="resultado" id="resultado"></h2>
+    </div>
+
+    <div>
+        <h2 id="dados"></h2>
+    </div>
+    <script src="jogo.js"></script>
+    <script src="requisicao.js"></script>
+</body>
+
+</html>
